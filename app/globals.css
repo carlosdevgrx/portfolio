@@ -1,26 +1,85 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a192f;
+  --foreground: #ccd6f6;
+  --muted: #8892b0;
+  --accent: #64ffda;
+  --light-navy: #112240;
+  --lightest-navy: #233554;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-light-navy: var(--light-navy);
+  --color-lightest-navy: var(--lightest-navy);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 30%, transparent);
+  color: var(--foreground);
+}
+
+.gradient-name {
+  background: linear-gradient(
+    135deg,
+    var(--foreground) 0%,
+    var(--foreground) 40%,
+    var(--accent) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.section-heading {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.section-hidden {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .section-hidden,
+  .section-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .experience-card,
+  .project-card {
+    transition: none !important;
+  }
 }
