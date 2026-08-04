@@ -41,7 +41,7 @@ export function Portfolio() {
       {/* Sidebar / Intro */}
       <header className="lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-[42%] lg:max-w-md lg:flex-col lg:justify-between lg:py-24 lg:pr-12">
         <div>
-          <p className="mb-2 font-mono text-sm text-accent">Hola, mi nombre es</p>
+          <p className="mb-2 font-mono text-sm text-accent">{intro.greeting}</p>
           <h1 className="gradient-name text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             {intro.name}.
           </h1>
@@ -117,7 +117,7 @@ export function Portfolio() {
 
       {/* Main content */}
       <main className="flex flex-1 flex-col gap-16 pb-24 pt-4 lg:gap-24 lg:py-24">
-        <Section id="about" index={1} title="About">
+        <Section id="about" index={1} title={navItems[0].label}>
           <div className="flex flex-col gap-4 text-muted">
             {about.paragraphs.map((paragraph, index) => (
               <p key={index} className="leading-relaxed">
@@ -127,7 +127,7 @@ export function Portfolio() {
           </div>
         </Section>
 
-        <Section id="experience" index={2} title="Experience">
+        <Section id="experience" index={2} title={navItems[1].label}>
           <ol className="flex flex-col gap-8">
             {experience.map((job) => (
               <li key={job.id}>
@@ -165,7 +165,7 @@ export function Portfolio() {
           </ol>
         </Section>
 
-        <Section id="projects" index={3} title="Projects">
+        <Section id="projects" index={3} title={navItems[2].label}>
           <ul className="grid gap-4 sm:grid-cols-2">
             {projects.map((project) => (
               <li key={project.id}>
