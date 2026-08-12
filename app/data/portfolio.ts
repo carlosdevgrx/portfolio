@@ -13,12 +13,12 @@ export const intro = {
 };
 
 export const about = {
-  paragraphs: [
-    "¡Buenas! Soy Carlos. Si tuviera que resumir lo que hago, te diría que me encanta construir cosas, y últimamente, sobre todo con IA. Llevo más de 6 años como desarrollador frontend picando código en React y TypeScript. Mis inicios fueron con WordPress y componentes a medida, pero he ido evolucionando hacia stacks modernos como Next.js y Node.js — ahora mismo estoy metido de lleno en ampliar mi perfil hacia el full-stack.",
-    "Para mí el diseño no es solo un boceto previo a la programación; es una pasión. Me muevo cómodo en Figma y he diseñado interfaces para bastantes clientes, incluyendo el rediseño completo de un portal B2C interno durante una transición de marca muy importante — un proyecto que me obligó a pensar de verdad en estrategia de producto y branding, no solo en maquetar componentes.",
+  pparagraphs: [
+    "¡Buenas! Soy Carlos. Si tuviera que resumir lo que hago, te diría que me encanta construir cosas, y últimamente, sobre todo con IA. Llevo más de 6 años como desarrollador frontend picando código en React y TypeScript. Mis inicios fueron con WordPress y componentes a medida, pero he ido evolucionando hacia stacks modernos como Next.js y Node.js. Ahora mismo estoy metido de lleno en ampliar mi perfil hacia el full-stack.",
+    "Para mí el diseño no es solo un boceto previo a la programación; es una pasión. Me muevo cómodo en Figma y he diseñado interfaces para bastantes clientes. De hecho, uno of mis mayores retos fue el rediseño completo de un portal B2C interno durante una transición de marca muy importante. Ahí me tocó pensar de verdad en estrategia de producto y branding, no solo en maquetar componentes.",
     "Disfruto conectando tres mundos: diseño, ingeniería sólida e inteligencia artificial. Me motiva lograr que una interfaz impecable funcione con un código limpio y escalable, aportando valor real al usuario.",
-    "Actualmente trabajo como Frontend Developer en Hiberus. En este tiempo he pasado por proyectos bastante exigentes en sectores como seguros y finanzas para clientes como MAPFRE, Sanitas, Caser, Redion o Randstad — entornos donde la fiabilidad, la accesibilidad y la calidad de producto no son negociables.",
-    "En paralelo, sigo experimentando por mi cuenta con Stridely: una app de running con funciones de IA que diseño, programo y gestiono de principio a fin, desde el concepto hasta la infraestructura.",
+    "Actualmente trabajo como Frontend Developer en Hiberus. En este tiempo he pasado por proyectos bastante exigentes en sectores como seguros y finanzas, trabajando para clientes como MAPFRE, Sanitas, Caser, Redion o Randstad. Son entornos donde la fiabilidad, la accesibilidad y la calidad no son negociables.",
+    "Por mi cuenta, sigo experimentando: estoy desarrollando Stridely, una app de running con funciones de IA que diseño, programo y gestiono de principio a fin (desde el concepto hasta la infraestructura).",
     "¿Y fuera de las pantallas? La mayor parte de mi tiempo libre tiene un nombre: mi hija.",
   ],  
 };
