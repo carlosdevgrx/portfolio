@@ -9,7 +9,7 @@ export const intro = {
   name: "Carlos",
   title: "Desarrollador Frontend",
   tagline:
-    "Construyo interfaces cuidadas con React y TypeScript — en la intersección de diseño, ingeniería e IA.",
+    "Construyo interfaces cuidadas con React y TypeScript, en la intersección de diseño, ingeniería e IA.",
 };
 
 export const about = {
