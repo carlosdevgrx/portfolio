@@ -13,7 +13,7 @@ export const intro = {
 };
 
 export const about = {
-  pparagraphs: [
+  paragraphs: [
     "¡Buenas! Soy Carlos. Si tuviera que resumir lo que hago, te diría que me encanta construir cosas, y últimamente, sobre todo con IA. Llevo más de 6 años como desarrollador frontend picando código en React y TypeScript. Mis inicios fueron con WordPress y componentes a medida, pero he ido evolucionando hacia stacks modernos como Next.js y Node.js. Ahora mismo estoy metido de lleno en ampliar mi perfil hacia el full-stack.",
     "Para mí el diseño no es solo un boceto previo a la programación; es una pasión. Me muevo cómodo en Figma y he diseñado interfaces para bastantes clientes. De hecho, uno of mis mayores retos fue el rediseño completo de un portal B2C interno durante una transición de marca muy importante. Ahí me tocó pensar de verdad en estrategia de producto y branding, no solo en maquetar componentes.",
     "Disfruto conectando tres mundos: diseño, ingeniería sólida e inteligencia artificial. Me motiva lograr que una interfaz impecable funcione con un código limpio y escalable, aportando valor real al usuario.",
