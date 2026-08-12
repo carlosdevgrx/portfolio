@@ -9,18 +9,18 @@ export const intro = {
   name: "Carlos",
   title: "Desarrollador Frontend",
   tagline:
-    "Construyo interfaces cuidadas con React y TypeScript — en la intersección de diseño, ingeniería e IA.",
+    "Construyo interfaces cuidadas con React y TypeScript, en la intersección de diseño, ingeniería e IA.",
 };
 
 export const about = {
   paragraphs: [
-    "Hola! Soy Carlos, y me gusta construir cosas — sobre todo con IA. Soy desarrollador frontend con más de 6 años de experiencia creando interfaces en React y TypeScript. Empecé este camino trabajando con WordPress y componentes a medida, y desde entonces he evolucionado hacia stacks modernos como React, Next.js y Node.js — actualmente estoy ampliando mi perfil hacia full-stack.",
-    "El diseño es algo que me apasiona de verdad, no solo lo veo como el paso previo a programar. Me manejo con soltura en Figma y he diseñado interfaces para varios clientes, incluyendo el rediseño completo de un portal B2C interno durante la transición de marca de Europ Assistance a Redion — un proyecto que me obligó a pensar en producto y en marca, no solo en componentes.",
-    "Disfruto especialmente en la intersección entre diseño, ingeniería sólida e IA — donde una interfaz cuidada se combina con código limpio y escalable, y con funcionalidades que realmente aportan inteligencia a la experiencia del usuario.",
-    "Ahora mismo trabajo como Frontend Developer en Hiberus. A lo largo de mi carrera he trabajado en proyectos del sector seguros y servicios financieros para clientes como MAPFRE, Sanitas, Caser y redion, además de otros proyectos como Randstad — entornos exigentes en cuanto a fiabilidad, accesibilidad y calidad de producto.",
-    "En paralelo, también desarrollo Stridely, una app de running con funcionalidades de IA que diseño y construyo por mi cuenta, desde el producto hasta la infraestructura.",
-    "Fuera del trabajo, la mayor parte de mi tiempo libre es para mi hija.",
-  ],
+    "¡Buenas! Soy Carlos. Si tuviera que resumir lo que hago, te diría que me encanta construir cosas, y últimamente, sobre todo con IA. Llevo más de 6 años como desarrollador frontend picando código en React y TypeScript. Mis inicios fueron con WordPress y componentes a medida, pero he ido evolucionando hacia stacks modernos como Next.js y Node.js. Ahora mismo estoy metido de lleno en ampliar mi perfil hacia el full-stack.",
+    "Para mí el diseño no es solo un boceto previo a la programación; es una pasión. Me muevo cómodo en Figma y he diseñado interfaces para bastantes clientes. De hecho, uno of mis mayores retos fue el rediseño completo de un portal B2C interno durante una transición de marca muy importante. Ahí me tocó pensar de verdad en estrategia de producto y branding, no solo en maquetar componentes.",
+    "Disfruto conectando tres mundos: diseño, ingeniería sólida e inteligencia artificial. Me motiva lograr que una interfaz impecable funcione con un código limpio y escalable, aportando valor real al usuario.",
+    "Actualmente trabajo como Frontend Developer en Hiberus. En este tiempo he pasado por proyectos bastante exigentes en sectores como seguros y finanzas, trabajando para clientes como MAPFRE, Sanitas, Caser, Redion o Randstad. Son entornos donde la fiabilidad, la accesibilidad y la calidad no son negociables.",
+    "Por mi cuenta, sigo experimentando: estoy desarrollando Stridely, una app de running con funciones de IA que diseño, programo y gestiono de principio a fin (desde el concepto hasta la infraestructura).",
+    "¿Y fuera de las pantallas? La mayor parte de mi tiempo libre tiene un nombre: mi hija.",
+  ],  
 };
 
 export const experience = [
