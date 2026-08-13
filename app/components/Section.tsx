@@ -11,11 +11,19 @@ type SectionProps = {
 
 export function Section({ id, index, title, children }: SectionProps) {
   const ref = useRef<HTMLElement>(null);
-  const [visible, setVisible] = useState(false);
+  // Start visible so SSR and above-fold sections never flash hidden
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
+
+    // If already in the viewport on mount, keep visible and skip the observer
+    const { top } = element.getBoundingClientRect();
+    if (top < window.innerHeight * 0.95) return;
+
+    // Below fold: hide immediately (user can't see this) then reveal on scroll
+    setVisible(false);
 
     const observer = new IntersectionObserver(
       ([entry]) => {

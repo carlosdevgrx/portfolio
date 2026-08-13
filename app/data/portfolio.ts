@@ -66,22 +66,7 @@ export const projects = [
       "App de running con funcionalidades de IA. La diseño y construyo por mi cuenta, desde el producto hasta la infraestructura.",
     tags: ["React Native", "IA", "Node.js", "Producto"],
     href: "#",
-  },
-  {
-    id: "proj-2",
-    title: "Portal B2C Redion",
-    description:
-      "Rediseño completo de un portal interno durante la transición de marca de Europ Assistance a Redion. Enfoque en producto, marca y experiencia de usuario.",
-    tags: ["React", "TypeScript", "Figma", "Design System"],
-    href: "#",
-  },
-  {
-    id: "proj-3",
-    title: "Proyectos enterprise",
-    description:
-      "Interfaces y componentes para el sector seguros y servicios financieros — MAPFRE, Sanitas, Caser y Randstad, entre otros.",
-    tags: ["React", "TypeScript", "Accesibilidad"],
-    href: "#",
+    screenshots: ["/stridely-1.png", "/stridely-2.png", "/stridely-3.png"],
   },
 ];
 

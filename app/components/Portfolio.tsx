@@ -11,10 +11,12 @@ import {
   projects,
   socialLinks,
 } from "../data/portfolio";
+import { Lightbox } from "./Lightbox";
 import { Section } from "./Section";
 
 export function Portfolio() {
   const [activeSection, setActiveSection] = useState<string>("about");
+  const [lightbox, setLightbox] = useState<{ images: string[]; index: number; alt: string } | null>(null);
 
   useEffect(() => {
     // Debounce to prevent rapid re-triggering at section boundaries
@@ -220,46 +222,64 @@ export function Portfolio() {
         </Section>
 
         <Section id="projects" index={4} title={navItems[2].label}>
-          <ul className="grid gap-4 sm:grid-cols-2">
-            {projects.map((project) => (
-              <li key={project.id}>
-                <a
-                  href={project.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-card group flex h-full flex-col rounded-lg border border-lightest-navy bg-light-navy/30 p-6 transition-all hover:-translate-y-1 hover:border-accent/30 hover:shadow-[0_8px_30px_-12px_rgba(100,255,218,0.25)]"
-                >
-                  <div className="mb-4 flex items-start justify-between gap-4">
-                    <span className="text-accent" aria-hidden="true">
-                      <FolderIcon />
-                    </span>
-                    <span
-                      className="text-muted transition-colors group-hover:text-accent"
-                      aria-hidden="true"
-                    >
-                      <ExternalLinkIcon />
-                    </span>
-                  </div>
-                  <h3 className="mb-2 font-medium text-foreground transition-colors group-hover:text-accent">
+          {projects.map((project) => (
+            <article key={project.id}>
+              <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground">
                     {project.title}
                   </h3>
-                  <p className="mb-6 flex-1 text-sm leading-relaxed text-muted">
+                  <p className="mt-2 max-w-md text-sm leading-relaxed text-muted">
                     {project.description}
                   </p>
-                  <ul className="mt-auto flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <li key={tag} className="font-mono text-xs text-muted">
-                        {tag}
-                      </li>
-                    ))}
-                  </ul>
-                </a>
-              </li>
-            ))}
-          </ul>
+                </div>
+                <ul className="flex flex-wrap gap-2 sm:justify-end">
+                  {project.tags.map((tag) => (
+                    <li
+                      key={tag}
+                      className="rounded-full border border-lightest-navy px-3 py-1 font-mono text-xs text-muted"
+                    >
+                      {tag}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {project.screenshots && (
+                <div className="grid grid-cols-3 gap-3 sm:gap-4">
+                  {project.screenshots.map((src, i) => (
+                    <button
+                      key={src}
+                      onClick={() => setLightbox({ images: project.screenshots!, index: i, alt: project.title })}
+                      className="group cursor-pointer overflow-hidden rounded-lg bg-light-navy transition-opacity hover:opacity-90"
+                      aria-label={`Ver ${project.title} captura ${i + 1}`}
+                    >
+                      <img
+                        src={src}
+                        alt={`${project.title} captura ${i + 1}`}
+                        className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                        loading="lazy"
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
+            </article>
+          ))}
         </Section>
       </main>
     </div>
+
+    {lightbox && (
+      <Lightbox
+        images={lightbox.images}
+        index={lightbox.index}
+        alt={lightbox.alt}
+        onClose={() => setLightbox(null)}
+        onPrev={() => setLightbox((l) => l && { ...l, index: (l.index - 1 + l.images.length) % l.images.length })}
+        onNext={() => setLightbox((l) => l && { ...l, index: (l.index + 1) % l.images.length })}
+      />
+    )}
 
     <section id="contact" className="flex min-h-screen flex-col items-center justify-center border-t border-lightest-navy px-6 py-32 text-center lg:px-24 lg:py-48">
       <h2 className="contact-heading">{contact.heading}</h2>
@@ -280,41 +300,5 @@ export function Portfolio() {
       </a>
     </section>
   </>
-  );
-}
-
-function FolderIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-7 w-7"
-    >
-      <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
-    </svg>
-  );
-}
-
-function ExternalLinkIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-5 w-5"
-    >
-      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-      <polyline points="15 3 21 3 21 9" />
-      <line x1="10" y1="14" x2="21" y2="3" />
-    </svg>
   );
 }
