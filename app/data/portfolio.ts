@@ -34,6 +34,7 @@ export const experience = [
     period: "2023 — Actualidad",
     role: "Frontend Developer",
     company: "Hiberus",
+    href: "https://www.hiberus.com",
     description:
       "Desarrollo frontend en proyectos de alta exigencia para clientes enterprise. En MAPFRE trabajé en portales digitales sobre WordPress Gutenberg y React a gran escala. En Sanitas contribuí al frontend de Salud Digital, plataforma sanitaria con múltiples perfiles de usuario.",
     tags: ["React", "Angular 18", "WordPress", "Gutenberg", "TypeScript"],
@@ -43,6 +44,7 @@ export const experience = [
     period: "2022 — 2023",
     role: "Front End & WordPress Developer",
     company: "Sngular",
+    href: "https://www.sngular.com",
     description:
       "Desarrollo de interfaces y componentes bajo metodología BEM/BEMIT en proyectos de mediana y gran escala. Trabajo con SASS, arquitectura CSS estructurada y WordPress como CMS en entornos de equipo con procesos de revisión rigurosos.",
     tags: ["WordPress", "Angular", "Vue", "SASS", "BEMIT", "JavaScript"],
@@ -52,6 +54,7 @@ export const experience = [
     period: "2018 — 2022",
     role: "Desarrollador Web",
     company: "Squembri",
+    href: "https://squembri.com",
     description:
       "Primeros años profesionales en agencia creativa. Desarrollo de sitios y tiendas a medida sobre WordPress para clientes de distintos sectores, combinando maquetación, diseño y programación de principio a fin.",
     tags: ["WordPress", "PHP", "JavaScript", "CSS"],
@@ -71,9 +74,9 @@ export const projects = [
 ];
 
 export const socialLinks = [
-  { label: "GitHub", href: "https://github.com" },
-  { label: "LinkedIn", href: "https://linkedin.com" },
-  { label: "Correo", href: "mailto:holacarlosfernandez@gmail.com" },
+  { label: "GitHub", href: "https://github.com/carlosdevgrx", icon: "github" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/carlos-fern%C3%A1ndez-garc%C3%ADa-216428111/", icon: "linkedin" },
+  { label: "Correo", href: "mailto:holacarlosfernandez@gmail.com", icon: "mail" },
 ];
 
 export const contact = {
