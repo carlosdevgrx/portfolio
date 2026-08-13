@@ -31,30 +31,30 @@ export const capabilities = {
 export const experience = [
   {
     id: "exp-1",
-    period: "2024 — Actualidad",
+    period: "2023 — Actualidad",
     role: "Frontend Developer",
     company: "Hiberus",
     description:
-      "Desarrollo de interfaces para proyectos del sector seguros y servicios financieros. Trabajo en entornos exigentes donde la fiabilidad, la accesibilidad y la calidad de producto son prioritarias.",
-    tags: ["React", "TypeScript", "Next.js", "Figma"],
+      "Desarrollo frontend en proyectos de alta exigencia para clientes enterprise. En MAPFRE trabajé en portales digitales sobre WordPress Gutenberg y React a gran escala. En Sanitas contribuí al frontend de Salud Digital, plataforma sanitaria con múltiples perfiles de usuario.",
+    tags: ["React", "Angular 18", "WordPress", "Gutenberg", "TypeScript"],
   },
   {
     id: "exp-2",
-    period: "2021 — 2024",
-    role: "Frontend Developer",
-    company: "MAPFRE, Sanitas, Caser, Redion, Randstad",
+    period: "2022 — 2023",
+    role: "Front End & WordPress Developer",
+    company: "Sngular",
     description:
-      "Proyectos para clientes enterprise en seguros y servicios. Destaca el rediseño completo de un portal B2C interno durante la transición de marca de Europ Assistance a Redion — pensando en producto y marca, no solo en componentes.",
-    tags: ["React", "TypeScript", "Figma", "Accesibilidad"],
+      "Desarrollo de interfaces y componentes bajo metodología BEM/BEMIT en proyectos de mediana y gran escala. Trabajo con SASS, arquitectura CSS estructurada y WordPress como CMS en entornos de equipo con procesos de revisión rigurosos.",
+    tags: ["WordPress", "Angular", "Vue", "SASS", "BEMIT", "JavaScript"],
   },
   {
     id: "exp-3",
-    period: "2018 — 2021",
-    role: "Desarrollador Frontend",
-    company: "Inicio de carrera",
+    period: "2018 — 2022",
+    role: "Desarrollador Web",
+    company: "Squembri",
     description:
-      "Primeros años construyendo interfaces con WordPress y componentes a medida, evolucionando hacia stacks modernos con React, Next.js y Node.js.",
-    tags: ["WordPress", "JavaScript", "React", "CSS"],
+      "Primeros años profesionales en agencia creativa. Desarrollo de sitios y tiendas a medida sobre WordPress para clientes de distintos sectores, combinando maquetación, diseño y programación de principio a fin.",
+    tags: ["WordPress", "PHP", "JavaScript", "CSS"],
   },
 ];
 
