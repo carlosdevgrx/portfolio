@@ -20,7 +20,12 @@ export const about = {
     "Actualmente trabajo como Frontend Developer en Hiberus. En este tiempo he pasado por proyectos bastante exigentes en sectores como seguros y finanzas, trabajando para clientes como MAPFRE, Sanitas, Caser, Redion o Randstad. Son entornos donde la fiabilidad, la accesibilidad y la calidad no son negociables.",
     "Por mi cuenta, sigo experimentando: estoy desarrollando Stridely, una app de running con funciones de IA que diseño, programo y gestiono de principio a fin (desde el concepto hasta la infraestructura).",
     "¿Y fuera de las pantallas? La mayor parte de mi tiempo libre tiene un nombre: mi hija.",
-  ],  
+  ],
+};
+
+export const capabilities = {
+  branding: ["Visual Identity", "Design Systems", "Art Direction"],
+  products: ["Web Design", "UX/UI Systems", "Full-Stack Development"],
 };
 
 export const experience = [
@@ -83,5 +88,13 @@ export const projects = [
 export const socialLinks = [
   { label: "GitHub", href: "https://github.com" },
   { label: "LinkedIn", href: "https://linkedin.com" },
-  { label: "Correo", href: "mailto:hello@example.com" },
+  { label: "Correo", href: "mailto:holacarlosfernandez@gmail.com" },
 ];
+
+export const contact = {
+  email: "holacarlosfernandez@gmail.com",
+  heading: "¿Hablamos?",
+  description:
+    "Cuéntame tu proyecto, idea o reto. Estaré encantado de leerlo.",
+  cta: "ESCRÍBEME",
+};

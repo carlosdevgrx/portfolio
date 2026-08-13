@@ -4,9 +4,17 @@
   --background: #0a192f;
   --foreground: #ccd6f6;
   --muted: #8892b0;
-  --accent: #64ffda;
+  --accent: #c4a0a8;
   --light-navy: #112240;
   --lightest-navy: #233554;
+}
+
+:root[data-theme="light"] {
+  --background: #f5efe8;
+  --foreground: #1e2d42;
+  --muted: #5a6878;
+  --light-navy: #e8e0d6;
+  --lightest-navy: #d6cbbf;
 }
 
 @theme inline {
@@ -27,6 +35,8 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
+  /* Only transition background-color — text/border colors snap instantly to avoid mid-transition illegibility */
+  transition: background-color 0.7s ease;
   font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
 
@@ -37,18 +47,23 @@ body {
   inset: 0;
   z-index: 0;
   pointer-events: none;
+  transition: opacity 0.6s ease;
   background:
     radial-gradient(
       720px circle at var(--cursor-x) var(--cursor-y),
-      rgba(100, 255, 218, 0.045),
+      rgba(200, 185, 170, 0.055),
       transparent 42%
     ),
     radial-gradient(
       960px circle at var(--cursor-x) var(--cursor-y),
-      rgba(204, 214, 246, 0.022),
+      rgba(200, 185, 170, 0.025),
       transparent 52%
     );
   will-change: background;
+}
+
+:root[data-theme="light"] .cursor-glow {
+  opacity: 0;
 }
 
 ::selection {
@@ -68,10 +83,29 @@ body {
   color: transparent;
 }
 
+.contact-heading {
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia,
+    serif;
+  font-size: clamp(4.5rem, 14vw, 10rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--foreground);
+}
+
 .section-heading {
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
-  font-weight: 600;
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-weight: 500;
   white-space: nowrap;
+}
+
+.section-title-serif {
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia,
+    serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.02em;
 }
 
 .section-hidden {
@@ -88,6 +122,10 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  body {
+    transition: none;
+  }
+
   html {
     scroll-behavior: auto;
   }

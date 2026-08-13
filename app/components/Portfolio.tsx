@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import {
   about,
+  capabilities,
+  contact,
   experience,
   intro,
   navItems,
@@ -15,8 +17,20 @@ export function Portfolio() {
   const [activeSection, setActiveSection] = useState<string>("about");
 
   useEffect(() => {
-    const sections = navItems
-      .map(({ id }) => document.getElementById(id))
+    // Debounce to prevent rapid re-triggering at section boundaries
+    const id = setTimeout(() => {
+      document.documentElement.dataset.theme =
+        activeSection === "experience" || activeSection === "projects"
+          ? "light"
+          : "dark";
+    }, 120);
+    return () => clearTimeout(id);
+  }, [activeSection]);
+
+  useEffect(() => {
+    const sectionIds = [...navItems.map(({ id }) => id), "contact"];
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
       .filter(Boolean) as HTMLElement[];
 
     const observer = new IntersectionObserver(
@@ -37,8 +51,9 @@ export function Portfolio() {
   }, []);
 
   return (
-    <div className="mx-auto flex min-h-screen max-w-6xl flex-col gap-12 px-6 py-12 lg:flex-row lg:gap-4 lg:px-12 lg:py-0">
+    <>
       {/* Sidebar / Intro */}
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 py-12 lg:flex-row lg:gap-4 lg:px-12 lg:py-0">
       <header className="lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-[42%] lg:max-w-md lg:flex-col lg:justify-between lg:py-24 lg:pr-12">
         <div>
           <p className="mb-2 font-mono text-sm text-accent">{intro.greeting}</p>
@@ -127,7 +142,46 @@ export function Portfolio() {
           </div>
         </Section>
 
-        <Section id="experience" index={2} title={navItems[1].label}>
+        <Section id="capabilities" index={2} title="Capacidades">
+          <p className="mb-10 max-w-sm text-base leading-relaxed text-muted">
+            Servicios integrales que conectan estrategia, diseño y tecnología
+            para mover tu negocio hacia adelante.
+          </p>
+
+          <div className="grid gap-8 sm:grid-cols-2">
+            {[
+              { label: "BRANDING & STRATEGY", items: capabilities.branding },
+              { label: "DIGITAL PRODUCTS", items: capabilities.products },
+            ].map(({ label, items }) => (
+              <div key={label}>
+                <div className="mb-5 flex items-center gap-4">
+                  <span className="font-mono text-[0.64rem] uppercase tracking-[0.24em] text-muted">
+                    {label}
+                  </span>
+                  <span className="h-px flex-1 bg-lightest-navy" />
+                </div>
+
+                <div className="space-y-0">
+                  {items.map((item, index) => (
+                    <div
+                      key={item}
+                      className="flex items-center gap-4 border-t border-lightest-navy py-4"
+                    >
+                      <span className="font-mono text-[0.66rem] uppercase tracking-[0.2em] text-muted">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <span className="text-base font-medium leading-none text-foreground sm:text-xl">
+                        {item}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        <Section id="experience" index={3} title={navItems[1].label}>
           <ol className="flex flex-col gap-8">
             {experience.map((job) => (
               <li key={job.id}>
@@ -153,7 +207,7 @@ export function Portfolio() {
                     {job.tags.map((tag) => (
                       <li
                         key={tag}
-                        className="rounded-full bg-accent/10 px-3 py-1 font-mono text-xs text-accent"
+                        className="rounded-full border border-lightest-navy px-3 py-1 font-mono text-xs text-muted"
                       >
                         {tag}
                       </li>
@@ -165,7 +219,7 @@ export function Portfolio() {
           </ol>
         </Section>
 
-        <Section id="projects" index={3} title={navItems[2].label}>
+        <Section id="projects" index={4} title={navItems[2].label}>
           <ul className="grid gap-4 sm:grid-cols-2">
             {projects.map((project) => (
               <li key={project.id}>
@@ -206,6 +260,26 @@ export function Portfolio() {
         </Section>
       </main>
     </div>
+
+    <section id="contact" className="flex min-h-screen flex-col items-center justify-center border-t border-lightest-navy px-6 py-32 text-center lg:px-24 lg:py-48">
+      <h2 className="contact-heading">{contact.heading}</h2>
+      <p className="mt-8 max-w-xs text-base leading-relaxed text-muted">
+        {contact.description}
+      </p>
+      <a
+        href={`mailto:${contact.email}`}
+        className="group mt-12 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-muted transition-colors hover:text-foreground"
+      >
+        {contact.cta}
+        <span
+          className="transition-transform duration-300 group-hover:translate-x-1"
+          aria-hidden="true"
+        >
+          &rarr;
+        </span>
+      </a>
+    </section>
+  </>
   );
 }
 

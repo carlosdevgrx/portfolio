@@ -38,10 +38,10 @@ export function Section({ id, index, title, children }: SectionProps) {
       className={`scroll-mt-24 lg:scroll-mt-0 ${visible ? "section-visible" : "section-hidden"}`}
     >
       <h2 className="section-heading mb-6 flex items-center gap-4 text-foreground">
-        <span className="font-mono text-accent">
+        <span className="font-mono text-foreground/40">
           {String(index).padStart(2, "0")}.
         </span>
-        {title}
+        <span className="section-title-serif">{title}</span>
         <span className="hidden h-px max-w-xs flex-1 bg-lightest-navy sm:block" />
       </h2>
       {children}
