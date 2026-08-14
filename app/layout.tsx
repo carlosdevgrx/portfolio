@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { CursorGlow } from "./components/CursorGlow";
+import { EasterEgg } from "./components/EasterEgg";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="relative min-h-full flex flex-col">
         <CursorGlow />
+        <EasterEgg />
         <div className="relative z-10 flex flex-1 flex-col">{children}</div>
       </body>
     </html>

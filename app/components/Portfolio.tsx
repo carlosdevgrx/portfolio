@@ -150,8 +150,8 @@ export function Portfolio() {
 
           <div className="grid gap-8 sm:grid-cols-2">
             {[
-              { label: "BRANDING & STRATEGY", items: capabilities.branding },
-              { label: "DIGITAL PRODUCTS", items: capabilities.products },
+              { label: "DISEÑO DE PRODUCTO", items: capabilities.design },
+              { label: "DESARROLLO", items: capabilities.development },
             ].map(({ label, items }) => (
               <div key={label}>
                 <div className="mb-5 flex items-center gap-4">
@@ -181,7 +181,7 @@ export function Portfolio() {
           </div>
         </Section>
 
-        <Section id="experience" index={3} title={navItems[1].label}>
+        <Section id="experience" index={3} title={navItems[2].label}>
           <ol className="flex flex-col gap-8">
             {experience.map((job) => (
               <li key={job.id}>
@@ -224,7 +224,7 @@ export function Portfolio() {
           </ol>
         </Section>
 
-        <Section id="projects" index={4} title={navItems[2].label}>
+        <Section id="projects" index={4} title={navItems[3].label}>
           {projects.map((project) => (
             <article key={project.id}>
               <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
