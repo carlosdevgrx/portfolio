@@ -10,17 +10,17 @@ export const intro = {
   name: "Carlos",
   title: "Desarrollador Frontend",
   tagline:
-    "Construyo interfaces cuidadas con React y TypeScript, en la intersección de diseño, ingeniería e IA.",
+    "Creo interfaces con React y TypeScript. Me gusta encontrar el equilibrio entre el diseño, la ingeniería y la inteligencia artificial.",
 };
 
 export const about = {
   paragraphs: [
-    "¡Buenas! Soy Carlos. Si tuviera que resumir lo que hago, te diría que me encanta construir cosas, y últimamente, sobre todo con IA. Llevo más de 6 años como desarrollador frontend picando código en React y TypeScript. Mis inicios fueron con WordPress y componentes a medida, pero he ido evolucionando hacia stacks modernos como Next.js y Node.js. Ahora mismo estoy metido de lleno en ampliar mi perfil hacia el full-stack.",
-    "Para mí el diseño no es solo un boceto previo a la programación; es una pasión. Me muevo cómodo en Figma y he diseñado interfaces para bastantes clientes. De hecho, uno de mis mayores retos fue el rediseño completo de un portal B2C interno durante una transición de marca muy importante. Ahí me tocó pensar de verdad en estrategia de producto y branding, no solo en maquetar componentes.",
-    "Disfruto conectando tres mundos: diseño, ingeniería sólida e inteligencia artificial. Me motiva lograr que una interfaz impecable funcione con un código limpio y escalable, aportando valor real al usuario.",
-    "Actualmente trabajo como Frontend Developer en Hiberus. En este tiempo he pasado por proyectos bastante exigentes en sectores como seguros y finanzas, trabajando para clientes como MAPFRE, Sanitas, Caser, Redion o Randstad. Son entornos donde la fiabilidad, la accesibilidad y la calidad no son negociables.",
-    "Por mi cuenta, sigo experimentando: estoy desarrollando Stridely, una app de running con funciones de IA que diseño, programo y gestiono de principio a fin (desde el concepto hasta la infraestructura).",
-    "¿Y fuera de las pantallas? La mayor parte de mi tiempo libre tiene un nombre: mi hija.",
+    "Buenos días! Me llamo Carlos. Me gusta mucho construir cosas, y ahora trabajo con inteligencia artificial casi todos los días, tanto en mi trabajo como en mis propios proyectos personales. He sido desarrollador de frontend durante más de ocho años, escribiendo código en React y TypeScript. Empecé con WordPress y componentes personalizados, y desde entonces he ido avanzando hacia tecnologías más modernas como Next.js y Node.js, incorporando inteligencia artificial en ellas cuando es necesario.",
+    "Mi objetivo actual es seguir creciendo como desarrollador full-stack, y la inteligencia artificial es una parte importante de cómo diseño las integraciones desde el principio hasta el final. También me gusta el diseño, y me siento cómodo utilizando Figma. He diseñado interfaces para muchos clientes, y uno de los desafíos que más recuerdo fue rediseñar un portal de comercio electrónico durante una transición de marca. En ese proyecto, tuve que pensar en la estrategia del producto y la identidad de la marca, no solo en crear pantallas.",
+    "Lo que más me gusta es combinar diseño, ingeniería sólida e inteligencia artificial en todos los aspectos, desde cómo programo hasta cómo pienso en el producto. Me encanta que una interfaz se vea bien y que tenga un código limpio y sólido debajo que pueda durar mucho tiempo.",
+    "Actualmente, trabajo como desarrollador de frontend en Hiberus, en proyectos exigentes para clientes como MAPFRE, Sanitas o Caser, que son sectores en los que no se puede permitir el error.",
+    "En mi tiempo libre, sigo trabajando en mis propios proyectos, como Stridely, una aplicación de running que utiliza inteligencia artificial y que estoy creando desde cero, desde el diseño hasta la infraestructura.",
+    "Y fuera del trabajo, me gusta pasar tiempo con mi hija.",
   ],
 };
 

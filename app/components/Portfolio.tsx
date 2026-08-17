@@ -294,12 +294,20 @@ export function Portfolio() {
         className="group mt-12 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-muted transition-colors hover:text-foreground"
       >
         {contact.cta}
-        <span
-          className="transition-transform duration-300 group-hover:translate-x-1"
-          aria-hidden="true"
-        >
-          &rarr;
-        </span>
+        <svg viewBox="0 0 16 16" className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+          <path d="M6 3l6 5-6 5" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M3 8h9" strokeLinecap="round" />
+        </svg>
+      </a>
+      <a
+        href="/recursos"
+        className="group mt-16 flex items-center gap-3 font-mono text-[0.65rem] uppercase tracking-widest text-muted/50 transition-colors hover:text-accent"
+      >
+        Wallpapers &amp; recursos de diseño
+        <svg viewBox="0 0 16 16" className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+          <path d="M6 3l6 5-6 5" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M3 8h9" strokeLinecap="round" />
+        </svg>
       </a>
     </section>
   </>
